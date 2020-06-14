@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterPage.master.cs" Inherits="KMS.components.masterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="main">
+            <div class="header">
+                欢迎使用知识管理系统，<asp:Label ID="userID" runat="server" Text="Label"></asp:Label>
+                <br />
+                您的身份是：<asp:Label ID="privilege" runat="server" Text="Label"></asp:Label>
+                <asp:Button ID="btnLogOut" runat="server" Text="[退出登录]" class="logout" OnClick="btnLogOut_Click"/>
+
+            </div>
+            <div class="main-body">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <div class="footer">
+                <p>©2020 Designed by Shawn Zhou, All rights reserved.</p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
